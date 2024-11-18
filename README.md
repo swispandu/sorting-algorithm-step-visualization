@@ -45,7 +45,7 @@ Built with Stackblitz Bolt, Next.js, Radix UI, TypeScript and Tailwind CSS.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/swispandu/sorting-algorithm-visualizer.git
+git clone https://github.com/swispandu/sorting-algorithm-step-visualization.git
 ```
 
 2. Install dependencies:
@@ -64,7 +64,7 @@ npm run dev
 
 ## Usage
 
-1. **Input Array**: Enter numbers (1-100) separated by commas or use the "Random" button
+1. **Input Array**: Enter numbers (1-15) separated by commas or use the "Random" button
 2. **Choose Algorithm**: Select a sorting algorithm from the tabs
 3. **Visualization**: Click "Start" to begin the visualization
 4. **Controls**:
@@ -77,10 +77,10 @@ npm run dev
 ```
 sorting-algorithm-visualizer/
 ├── app/                    # Next.js app directory
-├── components/            # React components
-├── lib/                   # Utilities and hooks
-├── public/               # Static assets
-└── styles/              # Global styles
+├── components/             # React components
+├── lib/                    # Utilities and hooks
+├── public/                 # Static assets
+└── styles/                 # Global styles
 ```
 
 ## Contributing
