@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --ring-offset: 328 73% 25%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 4%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 4%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222 47% 4%;
+    --secondary: 217 32% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 32% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 217 32% 17%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 32% 17%;
+    --input: 217 32% 17%;
+    --ring: 212.7 26.8% 83.9;
+    --ring-offset: 328 73% 25%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .card-gradient {
+    @apply bg-gradient-to-tr from-white/80 via-sky-50/80 to-sky-100/80 
+           dark:from-slate-900/90 dark:via-blue-950/80 dark:to-slate-900/90 
+           backdrop-blur-sm;
+  }
+  
+  .content-gradient {
+    @apply bg-gradient-to-br from-sky-50/90 to-white/90 
+           dark:from-black dark:to-slate-900
+           backdrop-blur-sm;
+  }
+
+  .btn-gradient {
+    @apply bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+           hover:from-blue-500 hover:via-blue-600 hover:to-blue-700
+           text-white shadow-lg hover:shadow-xl
+           transition-all duration-300;
+  }
+
+  .btn-gradient-outline {
+    @apply border-2 border-transparent
+           bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+           hover:from-blue-500 hover:via-blue-600 hover:to-blue-700
+           text-transparent bg-clip-text
+           hover:bg-clip-text
+           transition-all duration-300;
+  }
+
+  .step-btn-gradient {
+    @apply bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600
+           hover:from-blue-500 hover:via-blue-600 hover:to-blue-700
+           text-white shadow-sm hover:shadow-md
+           transition-all duration-300
+           px-1 py-0.5 min-w-[2rem];
+  }
+
+  .step-btn-gradient-active {
+    @apply bg-gradient-to-r from-blue-600 via-blue-700 to-pink-600
+           text-white shadow-md
+           px-1 py-0.5 min-w-[2rem];
+  }
+
+  .code-gradient {
+    @apply bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 
+           dark:from-black dark:via-blue-950 dark:to-black
+           text-blue-50 border-blue-900/30;
+  }
+  
+}
